@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Goblin+One&family=Titillium+Web&display=swap');
+*{
+  font-family: 'titillium', cursive;
+}
+
+.Header {
+  text-align: center;
+  background-color: #5fa3d1;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-container{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  gap: 1em;
+}
+.chart-frame {
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Full-page{
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  background-color: #7dcbfffe;
+  min-height: 100vh;
+}
+.mood-form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 10px 20px;
+  background-color: rgba(236, 236, 236, 0.705);
+  border: 3px solid #3498db;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #2c3e50;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.mood-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  padding-bottom: 2em;
+  margin-bottom: 15px;
+  border: 2px solid #3498db;
+  border-radius: 3px;
+}
+
+.MainContainer{
+  display: flex;
+  align-items: left ;
+  text-align: left;
+  justify-content: left;
+  flex-direction: column;
+  padding: 3em 2em 0 2em;
+  gap: 1em;
+  background-color: #3498db4e;
+  min-height: 100vh;
+}
+
+/* MoodCard.css */
+.mood-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid #3498db;
+  border-radius: 5px;
+  box-shadow: 7px 7px 0 rgba(32, 32, 32, 0.3);
+  padding: 10px;
+  width: 100%;
+}
+
+.mood-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.4em;
+}
+
+.mood-id {
+  margin: 5px;
+  color: #7f8c8d;
+}
+
+.mood-title {
+  margin: 0 0 5px;
+  color: #2c3e50;
+}
+
+.mood-note {
+  margin: 2px;
+  color: #34495e;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 0.2em solid #171717df;
+  margin-top: 10px;
+  box-shadow: 5px 5px 0 rgba(32, 32, 32, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  border: 0.2em solid #e74c3c;
+  background-color: #c0392b; 
+}
+
+/* MoodList.css */
+.mood-list-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.fetch-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fetch-button:hover {
+  background-color: #2980b9; 
+}
+
+.mood-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 20em;
+  gap: 0.7em;
+  margin-top: 20px;
+}
+
+.no-mood-message {
+  color: #e74c3c;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* MoodForm.css */
+.mood-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.mood-form-title {
+  color: #e74c3c;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mood-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  min-width: 20em;
+  border-radius: 5px;
+}
+
+.mood-select {
+  width: 100%;
+  padding: 5px;
+  min-width: 15em;
+  margin-bottom: 5px;
+  border: 2px solid #3498db;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.mood-note-input {
+  width: 100%;
+  padding: 5px;
+  min-width: 15em;
+  margin-bottom: 5px;
+  border: 2px solid #3498db;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 12em;
+  padding: 5px;
+  margin: 0px;
+  background-color: #3498db;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  border: 2px solid #2b2b2b;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:active,
+.delete-button:active {
+  transform: translate(2px, 2px);
+}
+
+.submit-button:hover {
+  border: 2px solid #3498db;
+  background-color: #2980b9; 
+}
